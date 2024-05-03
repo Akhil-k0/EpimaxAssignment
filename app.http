@@ -1,0 +1,57 @@
+POST http://localhost:3000/signup
+Content-Type:application/json
+
+{
+  "username": "",
+  "password_hash": ""
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type:application/json
+
+{
+  "username": "",
+  "password_hash": ""
+}
+
+###
+
+POST http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "title": "Node.js",
+  "description": "assignment should be submitted by 1st may",
+  "status": "pending",
+  "assignee_id": 1
+}
+###
+
+GET http://localhost:3000/tasks
+Authorization: Bearer 
+
+###
+
+GET http://localhost:3000/tasks/6
+Authorization: 
+
+###
+
+PUT http://localhost:3000/tasks/6
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "title": "Node.js",
+  "description": "Assignment completed by 5pm submission process left over",
+  "status": "completed",
+  "assignee_id": 1
+}
+
+###
+
+DELETE http://localhost:3000/tasks/6
+Authorization: Bearer 
