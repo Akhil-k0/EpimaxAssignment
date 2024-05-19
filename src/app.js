@@ -27,7 +27,7 @@ const initializeDBandServer = async () => {
     });
 
     app.listen(3000, () => {
-      console.log("Server Running at http://localhost:3000/");
+      console.log("Server Running at http://localhost:3000/api-docs/#/default");
     });
   } catch (error) {
     console.log(`DB Error: ${error.message}`);
@@ -108,7 +108,6 @@ app.post("/login", async (request, response) => {
     if (isPasswordMatch === true) {
       const payload = { username: username };
       const jwtToken = jwt.sign(payload, "secret");
-      console.log(jwtToken);
       response.send({ jwtToken });
     } else {
       response.status(400);
